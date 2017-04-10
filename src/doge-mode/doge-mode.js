@@ -78,7 +78,7 @@ class DogeMode extends Component {
     }
 
     static getDefaultDelayBetweenMessages() {
-        return 200;
+        return 180;
     }
 
     canSendMessage() {
@@ -178,13 +178,13 @@ class DogeMessage extends Component {
             if(content.slice(0,6) === 'emoji-'){
                 switch (content.slice(6)) {
                     case "basketball":
-                        content = <img className="emoji" src="http://emojipedia-us.s3.amazonaws.com/cache/5d/c8/5dc85e2c12b7e352fb9342962248439c.png"/>;
+                        content = <img className="emoji" src="http://emojipedia-us.s3.amazonaws.com/cache/5d/c8/5dc85e2c12b7e352fb9342962248439c.png" role="presentation"/>;
                         break;
                     case "chick":
-                        content = <img className="emoji" src="http://emojipedia-us.s3.amazonaws.com/cache/7a/38/7a382efa8d5ca07fd46bee4a3146c253.png"/>;
+                        content = <img className="emoji" src="http://emojipedia-us.s3.amazonaws.com/cache/7a/38/7a382efa8d5ca07fd46bee4a3146c253.png" role="presentation"/>;
                         break;
                     case "camera":
-                        content = <img className="emoji" src="http://emojipedia-us.s3.amazonaws.com/cache/f0/ee/f0ee803dbd557a23c3979ce1a1430c99.png"/>;
+                        content = <img className="emoji" src="http://emojipedia-us.s3.amazonaws.com/cache/f0/ee/f0ee803dbd557a23c3979ce1a1430c99.png" role="presentation"/>;
                         break;
                     default:
                 }
