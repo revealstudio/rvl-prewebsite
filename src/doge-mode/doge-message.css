@@ -1,0 +1,25 @@
+.emoji{
+    height: .9em;
+    margin: 0 .05em 0 .1em;
+    vertical-align: -0.1em;
+}
+.doge-message {
+    font-family: 'Comic Sans MS';
+    position: absolute;
+    animation-name: doge-move;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    user-select: none;
+    cursor: default;
+    font-size: 20px;
+    z-index: -1;
+
+}
+.doge-message::selection {
+    background: transparent;
+}
+
+@keyframes  doge-move{
+    0% {margin-top: 0; opacity: 1; transform: scale(1.2)}
+    100% {margin-top: -50px; opacity: 0;transform: scale(0.6)}
+}

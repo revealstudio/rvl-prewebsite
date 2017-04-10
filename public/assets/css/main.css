@@ -1,0 +1,59 @@
+body{
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background: #1F1F1F;
+  color: #fff;
+}
+
+.container{
+  margin: 100px 50px;
+  width: 800px;
+  max-width: 90%;
+}
+
+header{
+  margin-bottom: 100px;
+}
+
+h1{
+  font-family: "Bagnard", serif;
+  font-size: 36px;
+  margin: 0 0 7px 0;
+  font-weight: normal;
+}
+
+h2{
+  font-family: "Styrene", sans-serif;
+  font-size: 14px;
+  margin: 0;
+  font-weight: normal;
+}
+
+main p{
+  font-family: "GTAmerica", sans-serif;
+  font-size: 36px;
+  line-height: 56px;
+  margin: 0 0 18px 0;
+}
+
+a{
+  color: #fff;
+  text-decoration: none;
+  opacity: .66;
+
+  -webkit-transition: all ease .2s;;
+  -o-transition: all ease .2s;;
+  transition: all ease .2s;;
+}
+
+a:hover{opacity: 1;}
+
+@media (max-width: 991px) {
+  .container{
+    margin: 100px auto;
+    width: 90%;
+  }
+}
