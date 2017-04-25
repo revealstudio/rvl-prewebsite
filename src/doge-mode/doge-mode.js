@@ -163,7 +163,7 @@ class DogeMessage extends Component {
             this.removeMessage();
             return;
         }
-        this.style['top'] = "calc(" + this.props.offsetY + "px - 50px)";
+        this.style['top'] = "-30px";
         this.style['left'] = this.props.offsetX + "px";
         this.style['color'] = this.props.color;
     }
