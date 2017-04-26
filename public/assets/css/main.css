@@ -68,6 +68,12 @@ li{list-style: none;}
   float: right;
 }
 
+@media (max-width: 768px) {
+  .col-md-6, col-md-7{width: 100%; float: none; padding-left: 0; padding-right: 0;}
+  .row{margin-left: 0; margin-right: 0;}
+  .pull-right{float: none;}
+}
+
 /* Meaningful classes*/
 
 .container{
@@ -98,7 +104,7 @@ h2{
   right: 0;
   bottom: 0;
 }
-video{
+#video video, #video img{
   border-radius: 4px;
   opacity: .2;
   width: 100%;
@@ -107,6 +113,15 @@ video{
 header .contact{
   margin-top: 90px;
   font-size: 11px;
+}
+
+@media (min-width: 768px) {
+  #video video{display: block;}
+  #video img{display: none;}
+}
+@media (max-width: 768px) {
+  #video video{display: none;}
+  #video img{display: block;}
 }
 
 
@@ -172,6 +187,12 @@ header .contact{
 }
 
 
+@media (max-width: 768px) {
+  #fdc .content{padding: 20px; height: auto !important;}
+  #fdc .thumbnail{float: none; margin-right: 0; margin-bottom: 50px;}
+  #fdc .right-background{display: none;}
+}
+
 /* Current projects */
 #projects{margin-bottom: 200px;}
 
@@ -188,6 +209,10 @@ header .contact{
 
 #projects .project-title{
   display: inline-block;
+}
+
+@media (max-width: 768px) {
+  #projects .project-title{margin-bottom: 10px;}
 }
 
 
@@ -244,4 +269,10 @@ footer .subfooter #links ul li{
   font-size: 11px;
 }
 
-footer .emoji{ height: 1.4em; margin: 0 .05em 0 .1em; vertical-align: -0.2em;}
+.beers .emoji{ height: 1.4em; margin: 0 .05em 0 .1em; vertical-align: -0.2em;}
+
+
+@media (max-width: 768px) {
+  footer .subfooter #links{float: none; margin-top: 10px; display: block;}
+  footer .subfooter #links ul li{margin-left: 0; margin-right: 32px;}
+}
