@@ -127,23 +127,39 @@ class DogeMode extends Component {
         this.addMessage(evt.pageX - this.refs.elementRef.getBoundingClientRect().left, evt.pageY, this.selectMessage(), 1000);
     }
 
-    render() {
-        return (
-            <span ref="elementRef" onMouseMove={this.onEvent.bind(this)}>
-                {this.props.children}
-                {this.state.messages.map(m =>
-                    <DogeMessage key={m.id}
-                                 onDelete={this.onDeleteMessage.bind(this)}
-                                 message={m}
-                                 offsetY={m.y}
-                                 offsetX={m.x}
-                                 color={this.selectColor()}
-                    />
-                )}
-            </span>
-        )
+
+    mobileCheck() {
+        return !!(navigator.userAgent.match(/Android/i)
+        || navigator.userAgent.match(/webOS/i)
+        || navigator.userAgent.match(/iPhone/i)
+        || navigator.userAgent.match(/iPad/i)
+        || navigator.userAgent.match(/iPod/i)
+        || navigator.userAgent.match(/BlackBerry/i)
+        || navigator.userAgent.match(/Windows Phone/i));
     }
 
+    render() {
+        if(this.mobileCheck()){
+            return (
+                <span>{this.props.children}</span>
+            )
+        } else {
+            return (
+                <span ref="elementRef" onMouseMove={this.onEvent.bind(this)}>
+                {this.props.children}
+                    {this.state.messages.map(m =>
+                        <DogeMessage key={m.id}
+                                     onDelete={this.onDeleteMessage.bind(this)}
+                                     message={m}
+                                     offsetY={m.y}
+                                     offsetX={m.x}
+                                     color={this.selectColor()}
+                        />
+                    )}
+            </span>
+            )
+        }
+    }
 }
 
 
