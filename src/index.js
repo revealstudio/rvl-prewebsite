@@ -23,7 +23,7 @@ ReactDOM.render(
     function(){
         document.addEventListener('DOMContentLoaded', function(){
             var video = document.getElementById("video");
-            var ratio = 0.5;
+            var ratio = 0.1;
             window.addEventListener('scroll',function(evt){
                 video.style.transform = "translateY("+ Math.round(window.scrollY * ratio) +"px)";
             })
