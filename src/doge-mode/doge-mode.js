@@ -124,12 +124,12 @@ class DogeMode extends Component {
     }
 
     onEvent(evt) {
-        this.addMessage(evt.pageX, evt.pageY, this.selectMessage(), 1000);
+        this.addMessage(evt.pageX - this.refs.elementRef.getBoundingClientRect().left, evt.pageY, this.selectMessage(), 1000);
     }
 
     render() {
         return (
-            <span onMouseMove={this.onEvent.bind(this)}>
+            <span ref="elementRef" onMouseMove={this.onEvent.bind(this)}>
                 {this.props.children}
                 {this.state.messages.map(m =>
                     <DogeMessage key={m.id}
@@ -163,7 +163,7 @@ class DogeMessage extends Component {
             this.removeMessage();
             return;
         }
-        this.style['top'] = "calc(" + this.props.offsetY + "px - 50px)";
+        this.style['top'] = "-30px";
         this.style['left'] = this.props.offsetX + "px";
         this.style['color'] = this.props.color;
     }
@@ -185,6 +185,9 @@ class DogeMessage extends Component {
                         break;
                     case "camera":
                         content = <img className="emoji" src="http://emojipedia-us.s3.amazonaws.com/cache/f0/ee/f0ee803dbd557a23c3979ce1a1430c99.png" role="presentation"/>;
+                        break;
+                    case "love_letter":
+                        content = <img className="emoji" src="http://emojipedia-us.s3.amazonaws.com/cache/9a/78/9a7870669087cdc463b1dc1160f94a9e.png" role="presentation"/>;
                         break;
                     default:
                 }

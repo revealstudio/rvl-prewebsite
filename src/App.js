@@ -13,8 +13,11 @@ class App extends Component {
     }
     render() {
        return (
-           <p>Follow us on <DogeMode messages={["emoji-basketball"]}><a href="https://dribbble.com/wearemeaningful">Dribbble</a></DogeMode>
-               , <DogeMode messages={["emoji-chick"]}><a href="https://twitter.com/wearemngfl">Twitter</a></DogeMode> or <DogeMode messages={["emoji-camera"]}><a href="https://www.instagram.com/wearemngfl">Instagram</a></DogeMode>.</p>
+         <ul>
+           <li><DogeMode messages={["emoji-basketball"]}><a href="https://dribbble.com/wearemeaningful">Dribbble</a></DogeMode></li>
+           <li><DogeMode messages={["emoji-chick"]}><a href="https://twitter.com/wearemngfl">Twitter</a></DogeMode></li>
+           <li><DogeMode messages={["emoji-camera"]}><a href="https://www.instagram.com/wearemngfl">Instagram</a></DogeMode></li>
+        </ul>
        )
     }
 }
