@@ -17,3 +17,16 @@ ReactDOM.render(
     <DogeMode messages={["emoji-love_letter"]}><a href="mailto:hello@meaningful.studio">hello@meaningful.studio</a></DogeMode>,
     document.getElementById('footer-contact')
 );
+
+
+(
+    function(){
+        document.addEventListener('DOMContentLoaded', function(){
+            var video = document.getElementById("video");
+            var ratio = 0.5;
+            window.addEventListener('scroll',function(evt){
+                video.style.transform = "translateY("+ Math.round(window.scrollY * ratio) +"px)";
+            })
+        }, false);
+    }
+)();
