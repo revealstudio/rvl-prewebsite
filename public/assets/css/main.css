@@ -16,12 +16,29 @@ p{
 }
 
 a{
+  position: relative;
   font-family: "GTAmerica", monospace;
   border-bottom: 1px dotted #1F1F1F;
   text-decoration: none;
   color: inherit;
   padding-bottom: .1em;
 }
+
+a:after{
+  content: '';
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 0%;
+  background: #1F1F1F;
+  left: 0;
+  bottom: -1px;
+  -webkit-transition: all cubic-bezier(.34,0,.63,.99) .4s;
+  -o-transition: all cubic-bezier(.34,0,.63,.99) .4s;
+  transition: all cubic-bezier(.34,0,.63,.99) .4s;
+}
+
+a:hover:after{width: 100%;}
 
 ul{margin: 0; padding: 0;}
 li{list-style: none;}
@@ -188,8 +205,8 @@ header .contact{
 
 @media (max-width: 768px) {
   #fdc{margin-bottom: 84px;}
-  #fdc .content{padding: 16px 0; height: auto !important; background: transparent;}
-  #fdc .thumbnail{float: none; margin-right: 0; margin-bottom: 50px;}
+  #fdc .content{padding: 5% 0; height: auto !important; background: transparent;}
+  #fdc .thumbnail{float: none; margin-right: 0; margin-bottom: 50px; max-width: none;}
   #fdc .title{margin-bottom: 30px;}
   #fdc .right-background{height: 240px; width: 95%; left: 5%; border-radius: 8px 0 0 8px;}
 }
