@@ -135,7 +135,7 @@ header .contact{
   header{margin: 50px auto 100px;}
   h2{margin: 32px 0 40px; font-size: 26px;}
   p{font-size: 13px;}
-  #video video{display: none;}
+  #video {display: none;}
   header .contact{margin-top: 56px;}
 }
 
