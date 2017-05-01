@@ -194,16 +194,16 @@ class DogeMessage extends Component {
             if(content.slice(0,6) === 'emoji-'){
                 switch (content.slice(6)) {
                     case "basketball":
-                        content = <img className="emoji" src="http://emojipedia-us.s3.amazonaws.com/cache/5d/c8/5dc85e2c12b7e352fb9342962248439c.png" role="presentation"/>;
+                        content = <img className="emoji" src="/assets/img/emoji/dribbble.png" role="presentation"/>;
                         break;
                     case "chick":
-                        content = <img className="emoji" src="http://emojipedia-us.s3.amazonaws.com/cache/7a/38/7a382efa8d5ca07fd46bee4a3146c253.png" role="presentation"/>;
+                        content = <img className="emoji" src="/assets/img/emoji/twitter.png" role="presentation"/>;
                         break;
                     case "camera":
-                        content = <img className="emoji" src="http://emojipedia-us.s3.amazonaws.com/cache/f0/ee/f0ee803dbd557a23c3979ce1a1430c99.png" role="presentation"/>;
+                        content = <img className="emoji" src="/assets/img/emoji/instagram.png" role="presentation"/>;
                         break;
                     case "love_letter":
-                        content = <img className="emoji" src="http://emojipedia-us.s3.amazonaws.com/cache/9a/78/9a7870669087cdc463b1dc1160f94a9e.png" role="presentation"/>;
+                        content = <img className="emoji" src="/assets/img/emoji/mail.png" role="presentation"/>;
                         break;
                     default:
                 }
