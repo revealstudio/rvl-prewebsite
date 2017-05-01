@@ -124,26 +124,42 @@ class DogeMode extends Component {
     }
 
     onEvent(evt) {
-        this.addMessage(evt.pageX, evt.pageY, this.selectMessage(), 1000);
+        this.addMessage(evt.pageX - this.refs.elementRef.getBoundingClientRect().left, evt.pageY, this.selectMessage(), 1000);
+    }
+
+
+    mobileCheck() {
+        return !!(navigator.userAgent.match(/Android/i)
+        || navigator.userAgent.match(/webOS/i)
+        || navigator.userAgent.match(/iPhone/i)
+        || navigator.userAgent.match(/iPad/i)
+        || navigator.userAgent.match(/iPod/i)
+        || navigator.userAgent.match(/BlackBerry/i)
+        || navigator.userAgent.match(/Windows Phone/i));
     }
 
     render() {
-        return (
-            <span onMouseMove={this.onEvent.bind(this)}>
+        if(this.mobileCheck()){
+            return (
+                <span>{this.props.children}</span>
+            )
+        } else {
+            return (
+                <span ref="elementRef" onMouseMove={this.onEvent.bind(this)}>
                 {this.props.children}
-                {this.state.messages.map(m =>
-                    <DogeMessage key={m.id}
-                                 onDelete={this.onDeleteMessage.bind(this)}
-                                 message={m}
-                                 offsetY={m.y}
-                                 offsetX={m.x}
-                                 color={this.selectColor()}
-                    />
-                )}
+                    {this.state.messages.map(m =>
+                        <DogeMessage key={m.id}
+                                     onDelete={this.onDeleteMessage.bind(this)}
+                                     message={m}
+                                     offsetY={m.y}
+                                     offsetX={m.x}
+                                     color={this.selectColor()}
+                        />
+                    )}
             </span>
-        )
+            )
+        }
     }
-
 }
 
 
@@ -163,7 +179,7 @@ class DogeMessage extends Component {
             this.removeMessage();
             return;
         }
-        this.style['top'] = "calc(" + this.props.offsetY + "px - 50px)";
+        this.style['top'] = "-30px";
         this.style['left'] = this.props.offsetX + "px";
         this.style['color'] = this.props.color;
     }
@@ -178,13 +194,16 @@ class DogeMessage extends Component {
             if(content.slice(0,6) === 'emoji-'){
                 switch (content.slice(6)) {
                     case "basketball":
-                        content = <img className="emoji" src="http://emojipedia-us.s3.amazonaws.com/cache/5d/c8/5dc85e2c12b7e352fb9342962248439c.png" role="presentation"/>;
+                        content = <img className="emoji" src="/assets/img/emoji/dribbble.png" role="presentation"/>;
                         break;
                     case "chick":
-                        content = <img className="emoji" src="http://emojipedia-us.s3.amazonaws.com/cache/7a/38/7a382efa8d5ca07fd46bee4a3146c253.png" role="presentation"/>;
+                        content = <img className="emoji" src="/assets/img/emoji/twitter.png" role="presentation"/>;
                         break;
                     case "camera":
-                        content = <img className="emoji" src="http://emojipedia-us.s3.amazonaws.com/cache/f0/ee/f0ee803dbd557a23c3979ce1a1430c99.png" role="presentation"/>;
+                        content = <img className="emoji" src="/assets/img/emoji/instagram.png" role="presentation"/>;
+                        break;
+                    case "love_letter":
+                        content = <img className="emoji" src="/assets/img/emoji/mail.png" role="presentation"/>;
                         break;
                     default:
                 }
