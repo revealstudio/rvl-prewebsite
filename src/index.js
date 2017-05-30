@@ -9,12 +9,12 @@ ReactDOM.render(
 );
 
 ReactDOM.render(
-    <DogeMode messages={["emoji-love_letter"]}><a href="mailto:hello@meaningful.studio">Contact us</a></DogeMode>,
+    <DogeMode messages={["emoji-love_letter"]}><a href="mailto:hello@revealstudio.co">Contact us</a></DogeMode>,
     document.getElementById('first-contact')
 );
 
 ReactDOM.render(
-    <DogeMode messages={["emoji-love_letter"]}><a href="mailto:hello@meaningful.studio">hello@meaningful.studio</a></DogeMode>,
+    <DogeMode messages={["emoji-love_letter"]}><a href="mailto:hello@revealstudio.co">hello@revealstudio.co</a></DogeMode>,
     document.getElementById('footer-contact')
 );
 
