@@ -14,7 +14,7 @@ class App extends Component {
     render() {
        return (
          <ul>
-           <li><DogeMode messages={["emoji-basketball"]}><a href="https://dribbble.com/reveal">Dribbble</a></DogeMode></li>
+           <li><DogeMode messages={["emoji-basketball"]}><a href="https://dribbble.com/revealstudio">Dribbble</a></DogeMode></li>
            <li><DogeMode messages={["emoji-chick"]}><a href="https://twitter.com/revealparis">Twitter</a></DogeMode></li>
            <li><DogeMode messages={["emoji-camera"]}><a href="https://www.instagram.com/revealparis">Instagram</a></DogeMode></li>
         </ul>
