@@ -1,14 +1,14 @@
 @font-face {
-  src: url('../fonts/Bagnard.otf');
-  font-family: "Bagnard";
+  src: url('../fonts/MaisonNeue-Book.ttf');
+  font-family: "Maison Neue Book";
 }
 
 @font-face {
-  src: url('../fonts/StyreneA-Medium.otf');
-  font-family: "Styrene";
+  src: url('../fonts/MaisonNeue-Demi.ttf');
+  font-family: "Maison Neue Demi";
 }
 
 @font-face {
-  src: url('../fonts/GTAmericaMono-Regular.otf');
-  font-family: "GTAmerica";
+  src: url('../fonts/MaisonNeue-Mono.ttf');
+  font-family: "Maison Neue Mono";
 }
